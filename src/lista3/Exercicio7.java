@@ -10,7 +10,7 @@ public class Exercicio7 {
         Double[] peso = new Double[N];
         double maiorAltura = 0, maiorPeso = 0;
         int i = 0;
-        String maiornome = "";
+        String maiornomePeso = "", maiornomeAltura = "";
 
         for(i = 0; i < N; i++){
             System.out.println("INSIRA O NOME: ");
@@ -26,22 +26,18 @@ public class Exercicio7 {
 
             if(altura[i] > maiorAltura){
                 maiorAltura = altura[i];
-                maiorPeso = peso[i];
-                maiornome = nome[i];
+                maiornomeAltura = nome[i];
             }
 
             if(peso[i] > maiorPeso) {
-                maiorAltura = altura[i];
                 maiorPeso = peso[i];
-                maiornome = nome[i];
+                maiornomePeso = nome[i];
             }
         }
-        System.out.printf("\nA pessoa mais pesada é %s", maiornome);
-        System.out.printf("\nE um peso de %f", maiorPeso);
-        System.out.printf("\nCom uma altura de %f cm", maiorAltura);
-
-        System.out.printf("\nA pessoa mais alta é %s", maiornome);
-        System.out.printf("\nCom uma altura de %f cm", maiorAltura);
-        System.out.printf("\nE um peso de %f", maiorPeso);
+        System.out.printf("\nA pessoa mais pesada é %s", maiornomePeso);
+        System.out.printf("\nE tem um peso de %.2f kg", maiorPeso);
+        System.out.println();
+        System.out.printf("\nA pessoa mais alta é %s", maiornomeAltura);
+        System.out.printf("\nCom uma altura de %.2f cm", maiorAltura);
     }
 }
